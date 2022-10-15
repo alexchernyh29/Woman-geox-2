@@ -1,0 +1,189 @@
+.promo
+    position relative
+    padding w(100) w(200) w(0) w(70)
+    height 100vh
+    width auto
+    +below(768px)
+        background url('/images/promo-bg-mobile.jpg') 0 0/100% no-repeat //center
+        height auto
+        min-height 100vh
+        padding wm(100) wm(20) wm(40)
+    
+    &__woman
+        position absolute
+        bottom w(-5)
+        left w(170)
+        width w(710)
+        img
+            width 100%
+
+        +below(768px)
+            display none
+
+    &__wrap
+        position relative
+        z-index 1
+
+    &__circle
+        position absolute
+        width w(24)
+        height w(24)
+        border-radius 50%
+        background $bg-gblue
+
+        &_1
+            top w(110)
+            left w(5)
+
+            +below(768px)
+                top wm(110)
+                left w(20)
+                width wm(14)
+                height wm(14)
+        &_2
+            right w(75)
+            bottom w(80)
+
+            +below(768px)
+                display none
+
+
+    &__vertical
+        position absolute
+        font-family $ff-roboto
+        color $c-blue
+        width w(119)
+        height w(35)
+        left w(25)
+        top w(95)
+        margin 0
+        font-weight 500
+        font-size w(24)
+        line-height w(31)
+        text-transform uppercase
+        letter-spacing 0.5em
+        transform rotate(-90deg)
+        +below(768px)
+            transform rotate(0deg)
+            font-size wm(15)
+            line-height wm(16)
+            left wm(2)
+            top wm(0)
+            width wm(60)
+            height wm(15)
+            letter-spacing 0
+
+    &__content
+        position relative
+        +below(768px)
+            padding-top wm(20)
+            margin-bottom wm(260)
+
+    &__title
+        font-family $ff-playfairdisplay
+        color $c-blue
+        font-size w(200)
+        letter-spacing 0.01em
+
+        +below(768px)
+            font-size wm(65)
+
+        span
+            position relative
+            left w(-12)
+            font-style italic
+            +below(768px)
+                left wm(-4)
+    
+    &__title-line
+        position relative
+
+        &_1
+            padding-left w(90)
+            +below(768px)
+                padding-left 0
+
+        &_2
+            margin-top w(-30)
+            padding-left w(385)
+            +below(768px)
+                padding-left wm(70)
+
+        &_3
+            margin-top w(-30)
+            padding-left w(805)
+            +below(768px)
+                padding-left wm(110)
+
+    &__text
+        font-family $ff-roboto
+        color $c-black
+        margin w(40) 0 0 auto
+        padding-left w(90)
+        padding-right w(55)
+        width w(765)
+        font-size w(24)
+        line-height w(36)
+        +below(768px)
+            width 100%
+            height auto
+            padding 0
+            font-size wm(16)
+            line-height wm(18)
+            text-align center
+            margin 0
+            letter-spacing 0.02em
+
+    &__logo
+        position absolute
+        top w(200)
+        right w(340)
+        width w(193)
+
+        img
+            width 100%
+
+        +below(768px)
+            top wm(90)
+            right wm(20)
+            width wm(70)
+
+    &__sharing
+        position absolute
+        bottom w(20)
+        left w(70)
+        z-index 1
+        +below(768px)
+            top wm(520)
+            bottom auto
+            left auto
+            right wm(20)
+
+    &__arrow
+        position absolute
+        bottom w(30)
+        left 50%
+        transform translateX(-50%)
+        width w(50)
+        z-index 2
+        +below(768px)
+            z-index 0
+            bottom 0
+            width wm(45)
+
+        path:first-child
+            transition opacity .2s
+            
+            +below(768px)
+                opacity 0
+
+        img 
+            width 100%
+        
+    &__ellipsis
+        position absolute
+        top w(200)
+        right 0
+        width w(290)
+        +below(768px)
+            display none

@@ -1,0 +1,262 @@
+.result
+    position relative
+    background-color #fff
+    height 100vh
+
+    +below(768px)
+        overflow hidden
+        height 100vh
+
+    &__content
+        position relative
+        padding-top w(50)
+        height 100%
+        width 100%
+        max-width w(880)
+
+        +below(768px)
+            height auto
+            max-width wm(375)
+            padding-top wm(0)
+
+    &__ellipsis
+        position absolute
+        top w(60)
+        right w(170)
+        width w(380)
+
+        img
+            width 100%
+
+        +below(768px)
+            width 45.3125vw
+            top 1.375vw
+            left 68.125vw
+
+    &__wrap
+        display flex
+        flex-flow row nowrap
+        align-items stretch
+        justify-content space-between
+        padding 0 w(20) w(30) w(160)
+        height 100%
+
+        +below(768px)
+            display block
+            padding wm(10) wm(20) wm(0)
+
+    &__title
+        font-family $ff-roboto
+        font-weight bold
+        font-size w(24)
+        line-height w(31)
+        text-align right
+        letter-spacing 0.05em
+        text-transform uppercase
+        color $c-blue
+
+        +below(768px)
+            display none
+
+    &__span
+        position relative
+        top w(-20)
+        left w(-10)
+        display inline-block
+        width w(24)
+        height w(24)
+        border-radius 50%
+        background-color $c-blue
+
+        +below(768px)
+            width wm(9)
+            height wm(9)
+            top wm(-5)
+            left wm(0)
+            position relative
+
+    &__answer
+        position relative
+        font-size w(80)
+        line-height 1
+        letter-spacing 0.05em
+        color $c-blue
+        font-family $ff-playfairdisplay
+
+        span
+            position relative
+            left w(-3)
+            font-style italic
+
+        +below(768px)
+            padding-left wm(20)
+            font-size wm(40)
+
+        &::before
+            position absolute
+            content ''
+            left w(-45)
+            top w(60)
+            display inline-block
+            width w(24)
+            height w(24)
+            border-radius 50%
+            background-color $c-blue
+
+            +below(768px)
+                width wm(9)
+                height wm(9)
+                left 0
+                top wm(25)
+
+    &__text
+        padding-top w(45)
+        font-family $ff-roboto
+        font-size w(24)
+        line-height w(28)
+        letter-spacing 0.05em
+        color $c-black
+        padding-bottom w(40)
+
+        +below(768px)
+            font-size wm(14)
+            line-height wm(18)
+            padding-bottom wm(15)
+
+    &__row
+        position relative
+        display flex
+        flex-flow row nowrap
+        align-items center
+        padding w(10) w(15) w(10) w(100)
+        border-top w(3) solid $c-blue
+        border-bottom w(3) solid $c-blue
+        margin w(0) w(0) w(50)
+
+        +below(768px)
+            position relative
+            display flex
+            flex-flow column nowrap
+            align-items center
+            margin wm(0)
+
+    &__tag
+        position absolute
+        top 45%
+        left w(-80)
+        font-family $ff-roboto
+        font-weight bold
+        font-size w(20)
+        line-height 1
+        text-align center
+        letter-spacing 0.05em
+        text-transform uppercase
+        transform rotate(-90deg)
+        color $c-blue
+        white-space nowrap
+
+        +below(768px)
+            font-size wm(10)
+            line-height wm(14)
+            left wm(-45)
+
+    &__info
+        padding w(30) w(0)
+        font-family $ff-playfairdisplay
+        font-size w(20)
+        line-height w(28)
+        letter-spacing 0.05em
+        color $c-blue
+
+        +below(768px)
+            padding wm(20) w(0)
+            font-size wm(14)
+            line-height wm(14)
+
+    &__brand
+        font-family $ff-roboto
+        font-weight bold
+        font-size w(14)
+        line-height w(31)
+        letter-spacing 0.05em
+        text-transform uppercase
+        color $c-grey
+        text-align center
+
+        +below(768px)
+            font-size wm(10)
+            line-height wm(11)
+            height wm(25)
+            width wm(180)
+            margin-left wm(190)
+            margin-top wm(-30)
+    
+    &__images
+        position relative
+        width 100%
+        padding-left w(20)
+        display flex
+        flex-flow column
+        justify-content space-between
+        align-items stretch
+    
+    &__woman-img
+        max-width w(685)
+        width 100%
+
+        img
+            width 100%
+
+        +below(768px)
+            max-width wm(211)
+    
+    &__brand-img
+        position absolute
+        bottom w(25)
+        right 0
+        width w(550)
+        
+        img
+            width 100%
+
+        +below(768px)
+            width wm(255)
+            height wm(170)
+            top wm(20)
+            bottom auto
+    
+    &__btn
+        position absolute
+        left w(400)
+        bottom w(5)
+        font-family $ff-playfairdisplay
+        font-size w(24)
+        background-color $c-blue
+        color #fff
+        border-radius w(20)
+        padding w(10) w(15) w(12)
+        border 0
+        text-transform lowercase
+        text-decoration none
+        transition color .3s, background-color .3s
+
+        &:hover
+            background-color #fff
+            color $c-blue
+        
+        +below(768px)    
+            left wm(180)
+            bottom wm(10)
+            font-size wm(12)
+            border-radius wm(20)
+            padding wm(7) wm(10) wm(10)
+    
+    &__sharing
+        position absolute
+        left w(160)
+        bottom w(5)
+        .sharing__title
+            display none
+        +below(768px)
+            left wm(50)
+            bottom wm(10)

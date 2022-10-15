@@ -1,0 +1,46 @@
+mixin test(id)
+
+    +b('section').test(class='test_'+id)
+        +e.ellipsis
+            img(src='/images/ellipsis.svg')
+        +e.woman
+            img(src='/images/test-bg1.png')
+        +e.wrap
+            +e('p').counter 0<span>1</span>
+            +e('p').title
+            if (id !== 'images')
+                +e('ul').list
+                    +e('li').item(data-id='А')
+                        +e.sign
+                        +e.answer
+                            +e('p').answer-text
+                    +e('li').item(data-id='Б')
+                        +e.sign
+                        +e.answer
+                            +e('p').answer-text  
+                    +e('li').item(data-id='В')
+                        +e.sign
+                        +e.answer
+                            +e('p').answer-text 
+                    +e('li').item(data-id='Г')
+                        +e.sign
+                        +e.answer
+                            +e('p').answer-text 
+            else
+                +e('ul').list
+                    +e('li').item(data-id='А')
+                        +e.sign
+                        +e.answer
+                            img.answer__a(src='/images/test-bg7-a.png')
+                    +e('li').item(data-id='Б')
+                        +e.sign
+                        +e.answer
+                            img.answer__b(src='/images/test-bg7-b.png')
+                    +e('li').item(data-id='В')
+                        +e.sign
+                        +e.answer
+                            img.answer__v(src='/images/test-bg7-v.png')
+                    +e('li').item(data-id='Г')
+                        +e.sign
+                        +e.answer
+                            img.answer__g(src='/images/test-bg7-g.png')

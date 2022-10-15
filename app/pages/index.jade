@@ -1,0 +1,21 @@
+extends /blocks/layout-default/layout-default
+include /blocks/promo/promo
+include /blocks/result/result
+include /blocks/test/test
+include /blocks/sharing/sharing
+include /blocks/geox-logo/geox-logo
+include /blocks/promo-arrow/promo-arrow
+
+include /blocks/result/result
+
+block head
+	- var pageTitle = 'Project Template';
+
+block content
+	#fullpage
+		#promo.section
+			+promo()
+		#test.section
+			+test('left')
+		#result.section
+			+result()

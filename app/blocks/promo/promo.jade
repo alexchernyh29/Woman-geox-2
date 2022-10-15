@@ -1,0 +1,23 @@
+mixin promo()
+
+    +b('section').promo
+        +e.wrap
+            +e.content
+                +e('span').circle._1
+                +e('h4').vertical тест
+                +e('h3').title 
+                    +e('p').title-line._1 К<span>а</span>к<span>о</span>й&nbsp;в<span>ы</span>
+                    +e('p').title-line._2 пр<span>о</span>гн<span>о</span>з
+                    +e('p').title-line._3 п<span>о</span>г<span>о</span>д<span>ы</span>?
+            +e('p').text Ясное солнечное небо или переменная облачность, теплый ветерок или морозный снежный вихрь&nbsp;&mdash; на&nbsp;какой прогноз погоды вы&nbsp;похожи больше всего? Ответьте на&nbsp;несколько вопросов и&nbsp;узнайте ваш модный прогноз на&nbsp;эту осень, подготовленный совместно с&nbsp;экспертами Geox.
+        +e.sharing
+            +sharing()
+        +e.arrow 
+            +promo-arrow()
+        +e.ellipsis 
+            img(src='/images/promo-ellipsis.svg')
+        +e.logo
+            +geox-logo()
+        +e.woman
+            img(src='/images/promo-woman.png')
+        +e('span').circle._2

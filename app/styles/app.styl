@@ -1,0 +1,19 @@
+import('sprites/*')
+import('helpers/svg-size')
+@import 'helpers/variables'
+@import 'helpers/mixins'
+@import 'helpers/fonts'
+@import 'helpers/optimize'
+
+import('../blocks/**/*')
+
+body
+    #result
+        display none
+    
+    &.show-test .test
+        display block
+
+    &.show-result
+        #result
+            display block

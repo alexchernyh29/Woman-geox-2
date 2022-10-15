@@ -1,0 +1,371 @@
+.test
+    position relative
+    background-color #fff
+    padding w(90) w(145) w(20) w(120)
+    height 100vh
+
+    +below(768px)
+        padding wm(25) wm(20) 0
+        height auto  
+        min-height 100vh
+    
+    &[data-id="2"]
+        .test__title
+            font-size w(76)
+            +below(768px)
+                font-size wm(26)
+                line-height wm(28)
+
+        .test__answer-text
+            font-size w(28px)
+            +below(768px)
+                font-size wm(14)
+    
+    &[data-id="3"]
+        .test__title
+            font-size w(100)
+            +below(768px)
+                font-size wm(38)
+    
+    &[data-id="4"]
+        .test__title
+            font-size w(100)
+            +below(768px)
+                font-size wm(38)
+    
+    &[data-id="6"]
+        .test__title
+            font-size w(96px)
+            +below(768px)
+                font-size wm(38)
+        .test__list
+            width 100%
+
+    &_right
+        .test__ellipsis
+            left auto
+            right w(50)
+
+        .test__woman
+            bottom 0 
+            left w(20)
+            +below(768px)
+                left wm(20)
+
+        .test__wrap
+            align-items flex-end
+            +below(768px)
+                align-items center
+
+        .test__counter
+            left w(40)
+            top w(50)
+            max-width w(450)
+
+            +below(768px)
+                top wm(340)
+                left wm(20)
+
+            &::before
+                position absolute
+                content ''
+                left w(60)
+                top w(125)
+                width w(605)
+                display inline-block
+                border w(1) solid $c-blue
+
+                +below(768px)
+                    display none
+
+            &::after
+                content ''
+                left w(645)
+                top w(115)
+                display inline-block
+                width w(24)
+                height w(24)
+                border-radius 50%
+                background-color $c-blue
+
+                +below(768px)
+                    display none
+
+        .test__title 
+            max-width w(970)
+
+            +below(768px)
+                max-width wm(360)
+
+            &::before
+                left w(-730)
+                top w(73)
+                +below(768px)
+                    left wm(-12)
+                    top wm(18)
+
+        .test__list
+            padding-left 0
+            +below(768px)
+                padding wm(10) 0 0
+
+    &_images
+        .test__woman
+            display none
+        .test__list
+            padding-left 0
+            display flex
+            flex-flow row nowrap
+            justify-content space-between
+            align-items center
+            +below(768px)
+                padding wm(30) 0 0
+                flex-wrap wrap
+
+        .test__item
+            padding w(12) w(0) w(12) w(74)
+            +below(768px)
+                width 50%
+                padding wm(12) wm(0) wm(12) wm(50)
+
+        .test__answer
+            padding w(0) w(10)
+            img
+                width 100%
+    
+        .test__sign
+            position absolute
+            top 50%
+
+        .test__item::before
+            position absolute
+            left w(5)
+            top w(232)
+            +below(768px)
+                left wm(10)
+                top wm(55)
+        
+        .test__counter
+            +below(768px)
+                top auto
+                bottom wm(50)
+        .test__ellipsis
+            +below(768px)
+                top auto
+                bottom wm(15)
+
+    &__ellipsis
+        position absolute
+        top w(75)
+        left w(310)
+        width w(290)
+
+        img
+            width 100%
+        
+        +below(768px)
+            width wm(122)
+            top wm(350)
+            left wm(270)
+
+    &__woman
+        position absolute
+        bottom w(-5)
+        right w(145)
+        width w(750)
+        height w(902)
+        border-radius 50% 50% 0 0
+        overflow hidden
+        z-index 0
+
+        img
+            position absolute
+            bottom 0
+            left 50%
+            transform translateX(-50%)
+            width 100%
+
+        +below(768px)
+            max-width wm(378)
+            width wm(375)
+            height wm(375)
+            left wm(20)
+
+    &__wrap
+        display flex
+        flex-flow column
+        align-items stretch
+        justify-content space-between
+
+        +below(768px)
+            display flex
+            flex-flow column
+            justify-content center
+            align-items center
+
+    &__counter
+        position absolute
+        font-family $ff-playfairdisplay
+        font-size w(360)
+        line-height w(122)
+        text-align right 
+        color $c-blue
+        top w(50)
+        right w(295)
+        width w(380)
+
+        +below(768px)
+            font-size wm(144)
+            line-height wm(65)
+            top wm(340)
+            left wm(20)
+            right auto
+            width auto
+
+        &::before
+            position absolute
+            content ''
+            left w(-645)
+            top w(125)
+            width w(990)
+            display inline-block
+            border w(1) solid $c-blue
+
+            +below(768px)
+                display none
+
+        &::after
+            position absolute
+            content ''
+            left w(345)
+            top w(115)
+            display inline-block
+            width w(24)
+            height w(24)
+            border-radius 50%
+            background-color $c-blue
+
+            +below(768px)
+                display none
+
+    &__title
+        position relative
+        font-family $ff-playfairdisplay
+        font-size w(122)
+        line-height 1
+        color $c-blue
+        width w(1000)
+        +below(768px)
+            font-size wm(38)
+            line-height wm(42)
+            width wm(360)
+
+        span
+            position relative
+            left w(-6)
+            font-style italic
+            +below(768px)
+                left wm(-2)
+
+        &::before
+            position absolute
+            content ''
+            left w(-30)
+            top w(70)
+            display inline-block
+            width w(24)
+            height w(24)
+            border-radius 50%
+            background-color $c-blue
+
+            +below(768px)
+                width wm(8)
+                height wm(8)
+                left wm(-12)
+                top wm(18)
+
+    &__list
+        padding-top w(40)
+        padding-left w(150)
+        width 55%
+
+        +below(768px)
+            padding wm(10) 0 0
+            width 100%
+
+
+    &__item
+        position relative
+        display flex
+        flex-flow row nowrap
+        justify-content flex-start
+        align-items center
+        cursor pointer
+        margin-bottom w(15)
+        padding w(14) 0
+
+        +below(768px)
+            margin-bottom wm(15)
+
+        &.is-active
+            .test__sign::before
+                opacity 1
+            &:hover
+                .test__sign::before
+                    opacity 1
+
+        &:hover
+            .test__sign::before
+                opacity .3
+
+        &:last-child
+            margin-bottom 0
+
+    &__sign
+        position absolute
+        top 50%
+        left 0
+        transform translateY(-50%)
+        width w(74)
+        height w(64)
+        background url('/images/test-sign.png') no-repeat center
+        background-size 100%
+        flex-shrink 0
+        &::before
+            content ''
+            position absolute
+            top w(20)
+            left w(25)
+            width w(24)
+            height w(24)
+            background-color $c-blue
+            border-radius 50%
+            opacity 0
+            transition opacity .3s
+            +below(768px)
+                top wm(8)
+                left wm(11)
+                width wm(10)
+                height wm(10)
+        +below(768px)
+            width wm(31)
+            height wm(26)
+
+    &__answer
+        display flex
+        flex-flow row nowrap
+        justify-content flex-start
+        align-items center
+        padding-left w(120)
+        width 100%
+        +below(768px)
+            padding 0 0 0 wm(40)
+
+    &__answer-text
+        font-family $ff-roboto
+        font-size w(36)
+        line-height 1
+        letter-spacing 0.05em
+        color $c-black
+        +below(768px)
+            font-size wm(18)

@@ -1,0 +1,77 @@
+.sharing
+    position relative
+
+    &__title
+        position absolute
+        top w(-190)
+        left w(-105)
+        font-family $ff-roboto
+        width w(262)
+        height w(35)
+        font-size w(20)
+        line-height w(30)
+        color $c-blue
+        text-transform uppercase
+        transform rotate(-90deg)
+        +below(768px)
+            transform rotate(0deg)
+            top wm(-30)
+            left 0
+            width wm(100)
+            height wm(20)
+            font-size wm(11)
+            line-height 1
+
+    &__list
+        display flex
+        flex-flow row nowrap
+
+    &__item
+        display inline-block
+        margin-right w(10)
+        position relative
+        width w(50) 
+        height w(50)
+        background $bg-gblue
+        border-radius 50%
+        transition opacity .3s
+        +below(768px)
+            width wm(25)
+            height wm(25)
+
+        &:hover
+            opacity .7
+    
+        &:last-child
+            margin-right 0
+
+    &__link
+        display inline-block
+        height 100%
+        width 100%
+        border-radius 50%
+
+    &__icon
+        position absolute
+        top: 50%
+        left: 50%
+        transform translate(-50%,-50%)
+
+        &_fb
+            width w(10)
+            +below(768px)
+                width wm(5)
+        &_vk
+            width w(13)
+            +below(768px)
+                width wm(6)
+        
+        &_tw
+            width w(17)
+            +below(768px)
+                width wm(8)
+
+        &_od
+            width w(11)
+            +below(768px)
+                width wm(6)
